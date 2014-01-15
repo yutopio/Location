@@ -19,6 +19,7 @@
 		D17CCDC31886CF59006F97B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17CCDAB1886CF59006F97B2 /* UIKit.framework */; };
 		D17CCDCB1886CF59006F97B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D17CCDC91886CF59006F97B2 /* InfoPlist.strings */; };
 		D17CCDCD1886CF59006F97B2 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17CCDCC1886CF59006F97B2 /* LocationTests.m */; };
+		D17CCDD71886CFC1006F97B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17CCDD61886CFC1006F97B2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		D17CCDC81886CF59006F97B2 /* LocationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocationTests-Info.plist"; sourceTree = "<group>"; };
 		D17CCDCA1886CF59006F97B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D17CCDCC1886CF59006F97B2 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
+		D17CCDD61886CFC1006F97B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				D17CCDB71886CF59006F97B2 /* YTOAppDelegate.m */,
 				D17CCDB91886CF59006F97B2 /* Images.xcassets */,
 				D17CCDAE1886CF59006F97B2 /* Supporting Files */,
+				D17CCDD61886CFC1006F97B2 /* Main.storyboard */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17CCDD71886CFC1006F97B2 /* Main.storyboard in Resources */,
 				D17CCDB21886CF59006F97B2 /* InfoPlist.strings in Resources */,
 				D17CCDBA1886CF59006F97B2 /* Images.xcassets in Resources */,
 			);
