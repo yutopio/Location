@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Location-->
+        <!--Location View Controller - Location-->
         <scene sceneID="NVH-3H-udd">
             <objects>
-                <viewController id="cOq-K1-epD" sceneMemberID="viewController">
+                <viewController id="cOq-K1-epD" customClass="YTOLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Qf-tH-TAE"/>
                         <viewControllerLayoutGuide type="bottom" id="JzM-9z-Z19"/>
@@ -21,7 +21,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bre-bE-PGc"/>
-                                    <barButtonItem systemItem="refresh" id="eJ7-oz-D38"/>
+                                    <barButtonItem systemItem="refresh" id="eJ7-oz-D38">
+                                        <connections>
+                                            <action selector="updateLocation" destination="8RZ-h7-PLK" id="zCf-S3-61G"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LvG-kV-t4i"/>
                                 </items>
                             </toolbar>
@@ -43,11 +47,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IIe-eT-h3V">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IIe-eT-h3V">
                                 <rect key="frame" x="187" y="130" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-Er-QnF">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-Er-QnF">
                                 <rect key="frame" x="187" y="92" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
@@ -67,9 +71,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="9qc-op-Kfw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="xNn-by-zT7"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="5A0-DX-n0D"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="indicator1" destination="gfY-Er-QnF" id="5iI-da-iSi"/>
+                        <outlet property="indicator2" destination="IIe-eT-h3V" id="pDV-gW-kQt"/>
+                        <outlet property="latitude" destination="Blw-Z4-5fz" id="FuD-DF-y5P"/>
+                        <outlet property="longitude" destination="3Co-AV-A9P" id="xQJ-IB-m9X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8RZ-h7-PLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

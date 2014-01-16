@@ -20,6 +20,7 @@
 		D17CCDCB1886CF59006F97B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D17CCDC91886CF59006F97B2 /* InfoPlist.strings */; };
 		D17CCDCD1886CF59006F97B2 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17CCDCC1886CF59006F97B2 /* LocationTests.m */; };
 		D17CCDD71886CFC1006F97B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17CCDD61886CFC1006F97B2 /* Main.storyboard */; };
+		D17CCDDA1886DDCD006F97B2 /* YTOLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		D17CCDCA1886CF59006F97B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D17CCDCC1886CF59006F97B2 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
 		D17CCDD61886CFC1006F97B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D17CCDD81886DDCD006F97B2 /* YTOLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTOLocationViewController.h; sourceTree = "<group>"; };
+		D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTOLocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				D17CCDB91886CF59006F97B2 /* Images.xcassets */,
 				D17CCDAE1886CF59006F97B2 /* Supporting Files */,
 				D17CCDD61886CFC1006F97B2 /* Main.storyboard */,
+				D17CCDD81886DDCD006F97B2 /* YTOLocationViewController.h */,
+				D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -195,6 +200,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Yuto Takei";
 				TargetAttributes = {
+					D17CCDA31886CF59006F97B2 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					D17CCDBE1886CF59006F97B2 = {
 						TestTargetID = D17CCDA31886CF59006F97B2;
 					};
@@ -245,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17CCDB41886CF59006F97B2 /* main.m in Sources */,
+				D17CCDDA1886DDCD006F97B2 /* YTOLocationViewController.m in Sources */,
 				D17CCDB81886CF59006F97B2 /* YTOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +459,7 @@
 				D17CCDD21886CF59006F97B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D17CCDD31886CF59006F97B2 /* Build configuration list for PBXNativeTarget "LocationTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +468,7 @@
 				D17CCDD51886CF59006F97B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
