@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Co-AV-A9P">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Co-AV-A9P">
                                 <rect key="frame" x="112" y="125" width="171" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,12 +62,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DIk-vP-bHs">
+                                <rect key="frame" x="0.0" y="176" width="320" height="348"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rBw-j1-fs0" firstAttribute="leading" secondItem="Rtl-mT-sLm" secondAttribute="leading" id="55x-Yp-2L2"/>
                             <constraint firstAttribute="trailing" secondItem="rBw-j1-fs0" secondAttribute="trailing" id="6C7-ts-vQL"/>
+                            <constraint firstItem="rBw-j1-fs0" firstAttribute="top" secondItem="DIk-vP-bHs" secondAttribute="bottom" id="N6p-GW-yxl"/>
                             <constraint firstItem="JzM-9z-Z19" firstAttribute="top" secondItem="rBw-j1-fs0" secondAttribute="bottom" id="P9d-dR-56X"/>
+                            <constraint firstItem="DIk-vP-bHs" firstAttribute="leading" secondItem="Rtl-mT-sLm" secondAttribute="leading" id="Sv5-hL-O4F"/>
+                            <constraint firstItem="DIk-vP-bHs" firstAttribute="top" secondItem="3Co-AV-A9P" secondAttribute="bottom" constant="21" id="mEg-MU-kKU"/>
+                            <constraint firstAttribute="trailing" secondItem="DIk-vP-bHs" secondAttribute="trailing" id="muw-JH-3hd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="9qc-op-Kfw">
@@ -78,6 +86,7 @@
                         <outlet property="indicator2" destination="IIe-eT-h3V" id="pDV-gW-kQt"/>
                         <outlet property="latitude" destination="Blw-Z4-5fz" id="FuD-DF-y5P"/>
                         <outlet property="longitude" destination="3Co-AV-A9P" id="xQJ-IB-m9X"/>
+                        <outlet property="map" destination="DIk-vP-bHs" id="HRj-Rt-gAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8RZ-h7-PLK" userLabel="First Responder" sceneMemberID="firstResponder"/>

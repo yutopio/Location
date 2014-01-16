@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *longitude;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator1;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator2;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end
 
@@ -63,6 +64,10 @@ CLLocationManager *lm;
 
     [_indicator1 stopAnimating];
     [_indicator2 stopAnimating];
+    
+    MKCoordinateRegion region = MKCoordinateRegionMake([newLocation coordinate], MKCoordinateSpanMake(0.4, 0.4));
+    [_map setCenterCoordinate:[newLocation coordinate]];
+    [_map setRegion:region];
 }
 
 
