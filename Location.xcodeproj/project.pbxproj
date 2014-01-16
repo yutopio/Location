@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D100FE4018877C460029A5D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100FE3F18877C460029A5D1 /* MapKit.framework */; };
+		D100FE4318879F240029A5D1 /* YTODropPin.m in Sources */ = {isa = PBXBuildFile; fileRef = D100FE4218879F240029A5D1 /* YTODropPin.m */; };
 		D17CCDA81886CF59006F97B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17CCDA71886CF59006F97B2 /* Foundation.framework */; };
 		D17CCDAA1886CF59006F97B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17CCDA91886CF59006F97B2 /* CoreGraphics.framework */; };
 		D17CCDAC1886CF59006F97B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17CCDAB1886CF59006F97B2 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		D100FE3F18877C460029A5D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D100FE4118879F240029A5D1 /* YTODropPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTODropPin.h; sourceTree = "<group>"; };
+		D100FE4218879F240029A5D1 /* YTODropPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTODropPin.m; sourceTree = "<group>"; };
 		D17CCDA41886CF59006F97B2 /* Location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Location.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17CCDA71886CF59006F97B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D17CCDA91886CF59006F97B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				D17CCDD61886CFC1006F97B2 /* Main.storyboard */,
 				D17CCDD81886DDCD006F97B2 /* YTOLocationViewController.h */,
 				D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */,
+				D100FE4118879F240029A5D1 /* YTODropPin.h */,
+				D100FE4218879F240029A5D1 /* YTODropPin.m */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				D17CCDB41886CF59006F97B2 /* main.m in Sources */,
 				D17CCDDA1886DDCD006F97B2 /* YTOLocationViewController.m in Sources */,
 				D17CCDB81886CF59006F97B2 /* YTOAppDelegate.m in Sources */,
+				D100FE4318879F240029A5D1 /* YTODropPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface YTOLocationViewController : UIViewController < CLLocationManagerDelegate >
+@interface YTOLocationViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @end
