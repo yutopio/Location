@@ -79,9 +79,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="9qc-op-Kfw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="5A0-DX-n0D"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="5A0-DX-n0D">
+                            <connections>
+                                <action selector="showInGooleMaps:" destination="cOq-K1-epD" id="02J-YR-PWo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="googleMaps" destination="5A0-DX-n0D" id="92W-K2-oIi"/>
                         <outlet property="indicator1" destination="gfY-Er-QnF" id="5iI-da-iSi"/>
                         <outlet property="indicator2" destination="IIe-eT-h3V" id="pDV-gW-kQt"/>
                         <outlet property="latitude" destination="Blw-Z4-5fz" id="FuD-DF-y5P"/>

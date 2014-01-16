@@ -17,12 +17,14 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator1;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator2;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *googleMaps;
 
 @end
 
 @implementation YTOLocationViewController
 
 CLLocationManager *lm;
+CLLocationCoordinate2D coord;
 MKCircle *circle;
 YTODropPin *pin;
 
@@ -31,6 +33,7 @@ YTODropPin *pin;
     [super viewDidLoad];
     [self updateLocation];
     
+    _googleMaps.enabled = NO;
     _map.delegate = self;
 }
 
@@ -60,18 +63,31 @@ YTODropPin *pin;
     }
 }
 
+- (IBAction)showInGooleMaps:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?center=%f,%f", coord.latitude, coord.longitude]];
+    if (![[UIApplication sharedApplication] canOpenURL:url]) {
+        NSLog(@"Google Maps not installed.");
+    } else {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = [locations lastObject];
-    _latitude.text = [[NSString alloc] initWithFormat:@"%g", location.coordinate.latitude];
-    _longitude.text = [[NSString alloc] initWithFormat:@"%g", location.coordinate.longitude];
+    coord = location.coordinate;
+    _latitude.text = [[NSString alloc] initWithFormat:@"%f", coord.latitude];
+    _longitude.text = [[NSString alloc] initWithFormat:@"%f", coord.longitude];
     [lm stopUpdatingLocation];
 
     [_indicator1 stopAnimating];
     [_indicator2 stopAnimating];
+    
+    _googleMaps.enabled = YES;
 
-    MKCoordinateRegion region = MKCoordinateRegionMake([location coordinate], MKCoordinateSpanMake(0.04, 0.04));
-    [_map setCenterCoordinate:[location coordinate]];
+    MKCoordinateRegion region = MKCoordinateRegionMake(coord, MKCoordinateSpanMake(0.04, 0.04));
+    [_map setCenterCoordinate:coord];
     [_map setRegion:region];
 
     if (circle) {
@@ -81,8 +97,8 @@ YTODropPin *pin;
         pin = NULL;
     }
     
-    circle = [MKCircle circleWithCenterCoordinate:location.coordinate radius:100];
-    pin = [[YTODropPin alloc] initWithLocationCoordinate:location.coordinate title:@"Current Location"];
+    circle = [MKCircle circleWithCenterCoordinate:coord radius:100];
+    pin = [[YTODropPin alloc] initWithLocationCoordinate:coord title:@"Current Location"];
     [_map addOverlay:circle];
     [_map addAnnotation:pin];
 }
