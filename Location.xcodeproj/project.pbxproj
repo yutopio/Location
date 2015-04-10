@@ -23,6 +23,8 @@
 		D17CCDCD1886CF59006F97B2 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17CCDCC1886CF59006F97B2 /* LocationTests.m */; };
 		D17CCDD71886CFC1006F97B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17CCDD61886CFC1006F97B2 /* Main.storyboard */; };
 		D17CCDDA1886DDCD006F97B2 /* YTOLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */; };
+		D1D48BAC194B2F26008970DB /* YTOInputViewAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D48BAB194B2F26008970DB /* YTOInputViewAccessory.xib */; };
+		D1D48BAF194B309C008970DB /* YTOInputViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D48BAE194B309C008970DB /* YTOInputViewAccessory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		D17CCDD61886CFC1006F97B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D17CCDD81886DDCD006F97B2 /* YTOLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTOLocationViewController.h; sourceTree = "<group>"; };
 		D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTOLocationViewController.m; sourceTree = "<group>"; };
+		D1D48BAB194B2F26008970DB /* YTOInputViewAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTOInputViewAccessory.xib; sourceTree = "<group>"; };
+		D1D48BAD194B309C008970DB /* YTOInputViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTOInputViewAccessory.h; sourceTree = "<group>"; };
+		D1D48BAE194B309C008970DB /* YTOInputViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTOInputViewAccessory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,9 @@
 				D17CCDD91886DDCD006F97B2 /* YTOLocationViewController.m */,
 				D100FE4118879F240029A5D1 /* YTODropPin.h */,
 				D100FE4218879F240029A5D1 /* YTODropPin.m */,
+				D1D48BAB194B2F26008970DB /* YTOInputViewAccessory.xib */,
+				D1D48BAD194B309C008970DB /* YTOInputViewAccessory.h */,
+				D1D48BAE194B309C008970DB /* YTOInputViewAccessory.m */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17CCDD71886CFC1006F97B2 /* Main.storyboard in Resources */,
+				D1D48BAC194B2F26008970DB /* YTOInputViewAccessory.xib in Resources */,
 				D17CCDB21886CF59006F97B2 /* InfoPlist.strings in Resources */,
 				D17CCDBA1886CF59006F97B2 /* Images.xcassets in Resources */,
 			);
@@ -265,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D48BAF194B309C008970DB /* YTOInputViewAccessory.m in Sources */,
 				D17CCDB41886CF59006F97B2 /* main.m in Sources */,
 				D17CCDDA1886DDCD006F97B2 /* YTOLocationViewController.m in Sources */,
 				D17CCDB81886CF59006F97B2 /* YTOAppDelegate.m in Sources */,

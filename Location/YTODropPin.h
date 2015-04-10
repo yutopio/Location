@@ -9,16 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface YTODropPin : NSObject <MKAnnotation> {
-    CLLocationCoordinate2D coordinate;
-    NSString *annotationTitle;
-}
+@interface YTODropPin : NSObject <MKAnnotation>
 
-@property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readwrite, retain) NSString *annotationTitle;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy) NSString *annotationTitle;
 
-- (id)initWithLocationCoordinate:(CLLocationCoordinate2D) _coordinate
-                           title:(NSString *)_annotationTitle;
+- (id)initWithLocationCoordinate:(CLLocationCoordinate2D)coordinate
+                           title:(NSString *)annotationTitle;
 
 - (NSString *)title;
 

@@ -8,6 +8,7 @@
 
 #import "YTOLocationViewController.h"
 #import "YTODropPin.h"
+#import "YTOInputViewAccessory.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface YTOLocationViewController ()
@@ -109,5 +110,11 @@ YTODropPin *pin;
     circle.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
     return circle;
 }
+
+- (IBAction)textFieldEditingDidBegin:(id)sender {
+    ((UITextField *)sender).inputAccessoryView = [YTOInputViewAccessory sharedInstance];
+    [YTOInputViewAccessory sharedInstance].responder = sender;
+}
+
 
 @end

@@ -10,17 +10,14 @@
 
 @implementation YTODropPin
 
-@synthesize coordinate;
-@synthesize annotationTitle;
-
 - (NSString *)title {
-    return annotationTitle;
+    return _annotationTitle;
 }
 
-- (id)initWithLocationCoordinate:(CLLocationCoordinate2D) _coordinate
-                           title:(NSString *)_annotationTitle {
-    self.coordinate = _coordinate;
-    self.annotationTitle = _annotationTitle;
+- (id)initWithLocationCoordinate:(CLLocationCoordinate2D)coordinate
+                           title:(NSString *)annotationTitle {
+    self.coordinate = coordinate;
+    self.annotationTitle = annotationTitle;
     return self;
 }
 
